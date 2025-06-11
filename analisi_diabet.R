@@ -76,12 +76,3 @@ previsioni <- predict(modello, newdata = test_set[-9])
 #Valutazione delle prestazioni del modello
 confusionMatrix(table(previsioni, test_set$class))
 
-
-
-#Creazione del modello
-library(randomForest)
-modello <- randomForest(class ~ ., data = training_set)
-#Previsione del test set
-previsioni <- predict(modello, newdata = test_set[-9])
-#Valutazione delle prestazioni del modello
-confusionMatrix(table(previsioni, test_set$class))
